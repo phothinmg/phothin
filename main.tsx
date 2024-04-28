@@ -15,8 +15,6 @@ blog({
   ],
   lang: "en",
   favicon: "./img/favicon/favicon.ico",
-  theme: "dark",
-  port: 5454,
 });
 
 
