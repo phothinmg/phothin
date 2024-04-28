@@ -1,5 +1,25 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:@types/node": "npm:@types/node@18.16.19"
+    },
+    "npm": {
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
+      }
+    }
+  },
+  "redirects": {
+    "https://deno.land/x/htm/mod.ts": "https://deno.land/x/htm@0.2.3/mod.ts",
+    "https://esm.sh/v135/@types/he@~1.2/index.d.ts": "https://esm.sh/v135/@types/he@1.2.3/index.d.ts",
+    "https://esm.sh/v135/@types/katex@~0.16/index.d.ts": "https://esm.sh/v135/@types/katex@0.16.7/index.d.ts",
+    "https://esm.sh/v135/@types/marked@~5/index.d.ts": "https://esm.sh/v135/@types/marked@5.0.2/index.d.ts",
+    "https://esm.sh/v135/@types/prismjs@~1/index.d.ts": "https://esm.sh/v135/@types/prismjs@1.26.3/index.d.ts",
+    "https://esm.sh/v135/@types/remove-markdown@~0/index.d.ts": "https://esm.sh/v135/@types/remove-markdown@0.3.4/index.d.ts",
+    "https://esm.sh/v135/@types/sanitize-html@~2.8/index.d.ts": "https://esm.sh/v135/@types/sanitize-html@2.8.1/index.d.ts"
+  },
   "remote": {
     "https://deno.land/std@0.120.0/async/deadline.ts": "1d6ac7aeaee22f75eb86e4e105d6161118aad7b41ae2dd14f4cfd3bf97472b93",
     "https://deno.land/std@0.120.0/async/debounce.ts": "b2f693e4baa16b62793fd618de6c003b63228db50ecfe3bd51fc5f6dc0bc264b",
@@ -135,6 +155,9 @@
     "https://deno.land/x/htm@0.1.3/mod.ts": "93485a06c930907a40f09eb8d9deadf27aaaa228c5037a24be7a08b82c8b4bee",
     "https://deno.land/x/htm@0.1.3/plugins/color-scheme.ts": "e6aae324f7d28e2ad3a9c9dfa5665ba0e4cec2e05fabb04989dc124c0b5f6e36",
     "https://deno.land/x/htm@0.1.3/plugins/unocss.ts": "dca4739d3f07a243b14d072cc470537a8711e0b7218b4968e661d62ceeee6416",
+    "https://deno.land/x/htm@0.2.3/html.tsx": "774d0010a04dacf56a0b79bcbb9752eb53cf9aa26d73939468ca2e32cab704ec",
+    "https://deno.land/x/htm@0.2.3/jsx.ts": "a29e02857ab5a7e2b91fc9883c196388d2f7715afd1b047c9b0eaffe5a99493a",
+    "https://deno.land/x/htm@0.2.3/mod.ts": "d930056a7c8c645bea5f9c116d65bc309d12cfebafa8db98f7c406e1984caaec",
     "https://esm.sh/@unocss/core@0.46.3": "9049ec4601a3d23ef867686a6318db0036070087ed0f042aa2fa078484b7e7a5",
     "https://esm.sh/@unocss/preset-wind@0.46.3?bundle&no-check": "9bf95bcf4a8ef5528e505238763e37fb9300b3da5042b959c7c7d41f931b6629",
     "https://esm.sh/feed@4.2.2": "1a5822737d59ad06c741504c67eba07c68b582799b6b4609f17824cd5a3dcfe0",

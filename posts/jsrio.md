@@ -13,8 +13,6 @@ Package တစ်ခုခြင်းအတွက် Jsr ကပေးသော 
 
 Github Action ကနေ publish လုပ်ရင်တော့ verified ကြောင်းဖော်ပြပေးသည်။ကျနော့်တစ်ဦးထဲအမြင်ကတော့ package owner တစ်ယောက်အနေနှင့်မဟုတ်ပဲ User တစ်ယောက်အနေနှင့် Jsr ကိုသုံးသင့်တယ်လို့ယူဆပါသည်။ Node js compatible ဖြစ်တဲ့ package တွေကို npm yarn pnpm အားလုံးနှင့်သုံးလို့ရပါသည်။
 
-```js
-console.log("Hello")
-```
+
 
 
