@@ -1,0 +1,15 @@
+site:
+  name: "Pho Thin"
+  description: "Personal Blog"
+  author: "Pho Thin Maung"
+social:
+  github:
+  twitter:
+  facebook:
+og:
+  type: "Blog"
+  image:
+directories:
+  markdown: "posts"
+  images: "img"
+  style: "style"

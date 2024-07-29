@@ -1,9 +1,17 @@
 {
+  "$schema": "./deno.schema.json",
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env --watch main.tsx --dev",
     "serve": "deno run --allow-net --allow-read --allow-env --no-check main.tsx"
   },
   "imports": {
-    "blog": "https://deno.land/x/blog@0.7.0/blog.tsx"
+    "mm-mark": "jsr:@ptm/mm-mark@^0.2.8",
+    "front-matter": "jsr:@std/front-matter@^1.0.0",
+    "hono": "jsr:@hono/hono@^4.5.2",
+    "yaml": "jsr:@std/yaml@^1.0.0"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
   }
 }
