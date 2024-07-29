@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "hono/jsx";
-import { config, lang } from "../config.ts";
+import { config, lang } from "../lib/config.ts";
+import { css_content } from "../lib/css.ts";
 export interface LayoutProps {
   postTitle?: string;
 }
@@ -18,8 +19,8 @@ export function Layout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={config.site.description} />
         <meta name="keywords" content={kw} />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css" />
         <title>{tit}</title>
+        <style>{css_content}</style>
       </head>
       <body>{children}</body>
     </html>

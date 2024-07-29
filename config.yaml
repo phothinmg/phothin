@@ -2,7 +2,7 @@ site:
   name: "Pho Thin"
   description: "Personal Blog"
   author: "Pho Thin Maung"
-  locale: 'en-US'
+  locale: "en-US"
   keywords:
     - Blog
     - Personal
@@ -14,6 +14,6 @@ og:
   type: "Blog"
   image:
 directories:
-  markdown: "posts"
+  posts: "posts"
   images: "img"
   style: "style"

@@ -17,3 +17,28 @@ Node နှင့် Deno ၏ ဖန်တီးသူ Ryan ၏ javascript and t
 Package တစ်ခုခြင်းအတွက် Jsr ကပေးသော score system ရှိပါသည်။ ကျနော်တို့ Compiler bundler တွေသုံးစရာမလိုအပ်ပဲ Typescript ကို clean code ဖြစ်အောင် Strongly type ဖြစ်အောင်ရေးပေးရပါမယ်.. ကျနော်အခုအထိ score 100 မရသေးပါဘူး.. version တစ်ခုပြောင်းမယ်ဆို github action ကနေပဲဖြစ်ဖြစ် local ကနေပဲ ဖြစ်ဖြစ် publish လုပ်တဲ့အခါ uncommited change တွေရှိတဲ့အခါမရပါဘူးမင်းတင်ခြင်ရင် `--allow-dirty` flag ကို သုံးပါတဲ့.. တော်တော်ဂွမ်းသည်။
 
 Github Action ကနေ publish လုပ်ရင်တော့ verified ကြောင်းဖော်ပြပေးသည်။ကျနော့်တစ်ဦးထဲအမြင်ကတော့ package owner တစ်ယောက်အနေနှင့်မဟုတ်ပဲ User တစ်ယောက်အနေနှင့် Jsr ကိုသုံးသင့်တယ်လို့ယူဆပါသည်။ Node js compatible ဖြစ်တဲ့ package တွေကို npm yarn pnpm အားလုံးနှင့်သုံးလို့ရပါသည်။
+
+
+```ts
+import { transformContent, type LTR } from "bagancss";
+import { globSync } from "glob";
+import { style_dir } from "./config.ts";
+import { read_file } from "./utils.ts";
+
+const cssFiles = globSync(`${style_dir}/**/*.css`);
+
+const content: string[] = [];
+cssFiles.forEach((i) => {
+  const c = read_file(i);
+  content.push(c);
+});
+
+const css: string = content.join("\n");
+const transformed = transformContent({
+  content: css,
+  minify: true,
+}) as LTR;
+
+export const css_content = transformed.csscode;
+
+```

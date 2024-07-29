@@ -5,10 +5,13 @@
     "serve": "deno run --allow-net --allow-read --allow-env --no-check main.tsx"
   },
   "imports": {
-    "path": "jsr:@std/path@^1.0.2",
+    "hono-image": "jsr:@ptm/hono-image@^0.1.1",
+    "bagancss": "npm:bagancss@^0.0.11",
     "front-matter": "jsr:@std/front-matter@^1.0.0",
+    "glob": "npm:glob",
     "hono": "jsr:@hono/hono@^4.5.2",
     "mm-mark": "jsr:@ptm/mm-mark@^0.2.8",
+    "path": "jsr:@std/path@^1.0.2",
     "yaml": "jsr:@std/yaml@^1.0.0"
   },
   "compilerOptions": {
