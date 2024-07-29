@@ -6,6 +6,7 @@
       "jsr:@ptm/mm-mark@^0.2.8": "jsr:@ptm/mm-mark@0.2.8",
       "jsr:@std/collections@^1.0.4": "jsr:@std/collections@1.0.5",
       "jsr:@std/front-matter@^1.0.0": "jsr:@std/front-matter@1.0.0",
+      "jsr:@std/path@^1.0.2": "jsr:@std/path@1.0.2",
       "jsr:@std/toml@^1.0.0": "jsr:@std/toml@1.0.0",
       "jsr:@std/yaml@^1.0.0": "jsr:@std/yaml@1.0.0",
       "npm:js-yaml@^4.1.0": "npm:js-yaml@4.1.0",
@@ -37,6 +38,9 @@
           "jsr:@std/toml@^1.0.0",
           "jsr:@std/yaml@^1.0.0"
         ]
+      },
+      "@std/path@1.0.2": {
+        "integrity": "a452174603f8c620bd278a380c596437a9eef50c891c64b85812f735245d9ec7"
       },
       "@std/toml@1.0.0": {
         "integrity": "c9e37564eedd84084871c66238e00196ec67aa958e09a7f761b3f36273a7a8a5",
@@ -102,7 +106,9 @@
   "workspace": {
     "dependencies": [
       "jsr:@hono/hono@^4.5.2",
+      "jsr:@ptm/mm-mark@^0.2.8",
       "jsr:@std/front-matter@^1.0.0",
+      "jsr:@std/path@^1.0.2",
       "jsr:@std/yaml@^1.0.0"
     ]
   }

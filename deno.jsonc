@@ -5,9 +5,10 @@
     "serve": "deno run --allow-net --allow-read --allow-env --no-check main.tsx"
   },
   "imports": {
-    "mm-mark": "jsr:@ptm/mm-mark@^0.2.8",
+    "path": "jsr:@std/path@^1.0.2",
     "front-matter": "jsr:@std/front-matter@^1.0.0",
     "hono": "jsr:@hono/hono@^4.5.2",
+    "mm-mark": "jsr:@ptm/mm-mark@^0.2.8",
     "yaml": "jsr:@std/yaml@^1.0.0"
   },
   "compilerOptions": {

@@ -2,6 +2,10 @@ site:
   name: "Pho Thin"
   description: "Personal Blog"
   author: "Pho Thin Maung"
+  locale: 'en-US'
+  keywords:
+    - Blog
+    - Personal
 social:
   github:
   twitter:
