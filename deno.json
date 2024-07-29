@@ -1,7 +1,5 @@
 {
   "$schema": "./deno.schema.json",
-  "name": "@ptm/nyein-blog",
-  "version": "0.1.0",
 
   "tasks": {
     "start": "deno serve -A src/mod.ts"

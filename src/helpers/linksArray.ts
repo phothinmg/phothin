@@ -1,5 +1,5 @@
 import markdown from "./markdown.ts";
-import type { PostArrayProPs } from "../types/index.d.ts";
+import type { PostArrayProPs } from "../types/index.ts";
 
 export function postLinksArray(postFiles: string[]): Array<PostArrayProPs> {
   const pla: Array<PostArrayProPs> = [];

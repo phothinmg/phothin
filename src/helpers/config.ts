@@ -1,14 +1,14 @@
 import { globSync, join } from "../dependencies/deps.ts";
-import type { SiteMetaData } from "../types/index.d.ts";
-import { hpdata } from "./home.ts";
-const siteName: string | undefined = hpdata().site;
+import type { SiteMetaData } from "../types/index.ts";
 
 export default function configure(opts: SiteMetaData) {
   const root = Deno.cwd();
-  const postFolder: string = opts.postDir ?? "posts";
-  const pageFolder: string = opts.pageDir ?? "pages";
-  const imageFolder: string = opts.imageDir ?? "images";
+  const appDir = opts.appDir ?? "app";
+  const postFolder: string = opts.postDir ?? "app/posts";
+  const pageFolder: string = opts.pageDir ?? "app/pages";
+  const imageFolder: string = opts.imageDir ?? "app/images";
   const styleFolder: string = "src/styles";
+  const logo_file = opts.logo ?? "logo.png";
 
   const post_folder = join(root, postFolder);
   const page_folder = join(root, pageFolder);
@@ -21,9 +21,10 @@ export default function configure(opts: SiteMetaData) {
     `${image_folder}/**/*.{png,jpeg,jpg,ico,svg,webp}`
   );
   const styleFiles = globSync(`${style_folder}/**/*.css`);
-
+  const indexFile = join(appDir, "index.md");
+  const logoFile = join(image_folder, logo_file);
   return {
-    siteName: siteName ?? "Nyein Blog Template",
+    siteName: opts.siteName ?? "Hono Blog Template",
     author: opts.author ?? "",
     description: opts.description ?? "Blog with Deno and Hono",
     lang: opts.lang ?? "en",
@@ -44,5 +45,7 @@ export default function configure(opts: SiteMetaData) {
     imageFiles,
     styleFolder,
     styleFiles,
+    indexFile,
+    logoFile,
   };
 }

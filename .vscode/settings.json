@@ -1,3 +1,16 @@
 {
-    "deno.enable": true
+    "deno.enable": true,
+    "cSpell.words": [
+        "filesarrays",
+        "honoapp",
+        "hpdata",
+        "pageimage",
+        "pagestyle",
+        "pico",
+        "postimage",
+        "poststyle",
+        "postview",
+        "pview",
+        "utli"
+    ]
 }

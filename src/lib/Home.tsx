@@ -1,22 +1,23 @@
-import { Hono, mark } from "../dependencies/deps.ts";
+import { Hono, mark, extractYaml } from "../dependencies/deps.ts";
 import type { FC } from "../dependencies/deps.ts";
-import { NaviBar, Footer, Layout } from "./Components.tsx";
-import type { HomePageType, SiteMetaData } from "../types/index.d.ts";
+import { Footer } from "../components/Footer.tsx";
+import { Layout } from "../components/Layout.tsx";
+import { NavBar } from "../components/Navigation.tsx";
+import type { SiteMetaData } from "../types/index.ts";
 import configure from "../helpers/config.ts";
-import { hpdata } from "../helpers/home.ts";
 import { JSX } from "jsr:@hono/hono@^4.4.6/jsx/jsx-runtime";
+import { readFile } from "../helpers/utli.ts";
 
 const homepage = (opts: SiteMetaData) => {
   const home = new Hono();
 
   const data = configure(opts);
-
-  const hpd: HomePageType = hpdata();
-  const text: string = hpd.markdown ?? "";
-  const logo: string = hpd.logo ?? "";
+  const txt: string = readFile(data.indexFile);
+  const text: string = extractYaml(txt).body;
+  const logo: string = data.logoFile ?? "";
   const htm: string = mark.default.renderHtml({ text: text });
   const inner = { _html: htm };
-  const logoLink: string = `./${data.imageFolder}/${logo}`;
+  const logoLink: string = logo;
 
   const Home: FC = () => {
     return (
@@ -31,10 +32,10 @@ const homepage = (opts: SiteMetaData) => {
           <div class="top-hero">
             <img src={logoLink} alt="logo" class="logo-img" />
             <br />
-            <h4 class="site-title">{hpd.site}</h4>
-            <p>{hpd.bio}</p>
+            <h4 class="site-title">{data.siteName}</h4>
+            <p>{data.description}</p>
             <br />
-            <NaviBar />
+            <NavBar />
             <hr />
           </div>
           <div

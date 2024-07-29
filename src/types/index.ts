@@ -1,18 +1,84 @@
-declare interface SiteMetaData {
+
+/**
+ * ### Site configuration 
+ */
+export interface SiteMetaData {
+  /**
+   * **Name of the blog - default `"Hono Blog Template"`**
+   */
+  siteName?: string;
+  logo?: string;
+  /**
+   * **Author name of the blog  - default `" "`**
+   */
   author?: string;
+   /**
+   * **Description of the blog  - default `" "`**
+   */
   description?: string;
+   /**
+   * **Lang for html  - default `en`**
+   */
   lang?: string;
+   /**
+   * **Favicon for html  - default `" "`**
+   */
   favicon?: string;
   ogImage?: string;
+  /**
+   * **Recommended for when deploy the blog, deployed URL.**
+   */
   ogUrl?: string;
+  /**
+   * Facebook profile link
+   */
   facebook?: string;
+  /**
+   * Github profile link
+   */
   github?: string;
+  /**
+   * Twitter profile link
+   */
   twitter?: string;
+  /**
+   * Discord profile link
+   */
   discord?: string;
+  /**
+   * Mastodon profile link
+   */
   mastodon?: string;
+  /**
+   *  Linkedin profile link
+   */
   linkedin?: string;
+  /**
+   * **Directory for main  default `app`** 
+   */
+  appDir?: string;
+  /**
+   * **Directory under appDir for Post markdown files default `app/posts`** 
+   * 
+   */
   postDir?: string;
+  /**
+   * **Directory under appDir for Page markdown files default `app/pages`** 
+   * 
+   */
   pageDir?: string;
+  /**
+   * **Directory under appDir for image files default `app/images`** 
+   * 
+   * Supported image's file extensions
+   * 
+   * ```
+   * ".png" , ".jpg" , ".jpeg" , ".ico"
+   * 
+   * ".svg" , ".webp"
+   * ```
+   * 
+   */
   imageDir?: string;
 }
 
@@ -33,7 +99,7 @@ export interface PostArrayProPs {
   birthtime: Date | null;
 }
 
-declare interface HomePageType {
+export interface HomePageType {
   site?: string;
   logo?: string;
   bio?: string;
@@ -91,4 +157,4 @@ export type PostLinkType = {
   }>;
 };
 
-export { SiteMetaData, HomePageType };
+

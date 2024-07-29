@@ -6,7 +6,7 @@ import type {
   PostArrayProPs,
   PostData,
   PostLinkType,
-} from "../types/index.d.ts";
+} from "../types/index.ts";
 import { readingTime } from "../helpers/utli.ts";
 import markdown from "../helpers/markdown.ts";
 // ---------
@@ -112,7 +112,7 @@ const ThemeModal: FC = memo(() => (
 ));
 
 //--
-export const NaviBar: FC = memo(() => (
+export const NavBar: FC = memo(() => (
   <>
     <nav>
       <ul>
@@ -163,7 +163,7 @@ export const Header: FC<{ siteName: string }> = memo(({ siteName }) => (
           </li>
         </ul>
         <ul>
-          <NaviBar />
+          <NavBar />
         </ul>
       </nav>
     </header>
@@ -228,14 +228,6 @@ export const Footer: FC<{ opts: SocialLinks }> = memo(({ opts }) => (
             mastodon: opts.mastodon,
           }}
         />
-        <iframe
-          src="https://nyeindenodev.instatus.com/embed-status/e16ddcdb/light-md"
-          width="230"
-          height="61"
-          frameBorder="0"
-          scrolling="no"
-          style="border: none;"
-        ></iframe>
       </footer>
     </div>
   </>

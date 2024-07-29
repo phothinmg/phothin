@@ -1,6 +1,6 @@
 import { extractYaml, mark } from "../dependencies/deps.ts";
 import { readFile } from "./utli.ts";
-import type { PostData } from "../types/index.d.ts";
+import type { PostData } from "../types/index.ts";
 
 /**
  * Converts a markdown file to a PostData object.

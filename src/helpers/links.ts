@@ -1,4 +1,4 @@
-import type { ImageLinks, StyleLinks, FileArrays } from "../types/index.d.ts";
+import type { ImageLinks, StyleLinks, FileArrays } from "../types/index.ts";
 
 export const filesarrays = (opts: FileArrays) => {
   // deno-lint-ignore prefer-const
