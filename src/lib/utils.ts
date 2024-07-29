@@ -1,7 +1,7 @@
 import { extract } from "front-matter/yaml";
 import module from "mm-mark";
 export interface Attrs {
-  type: "post" | "page";
+  type: "post" | "page" | "index";
   title: string;
   date?: Date | string;
   tags?: string[] | [];

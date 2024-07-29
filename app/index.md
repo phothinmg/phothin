@@ -1,4 +1,4 @@
 ---
-type: "page"
+type: "index"
 title: "Home"
 ---

@@ -1,3 +1,3 @@
-import { config } from "./src/config.ts";
+import { config, pages_dir } from "./src/lib/config.ts";
 
-console.log(config);
+console.log(pages_dir);

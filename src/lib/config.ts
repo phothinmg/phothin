@@ -27,12 +27,17 @@ export interface Config {
     images: string;
     style: string;
   };
+  home: {
+    logo: string;
+  };
 }
 
 const txt = read_file(config_yaml);
 
 export const config = parse(txt) as Config;
-export const md_dir = join(app, config.directories.posts);
+export const posts_dir = join(app, config.directories.posts);
+export const pages_dir = join(app, config.directories.pages);
 export const img_dir = join(app, config.directories.images);
 export const style_dir = join(app, config.directories.style);
 export const lang = config.site.locale.split("-")[0];
+export const logo_image = join(img_dir, config.home.logo);

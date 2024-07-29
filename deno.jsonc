@@ -1,8 +1,7 @@
 {
   "$schema": "./deno.schema.json",
   "tasks": {
-    "dev": "deno run --allow-net --allow-read --allow-env --watch main.tsx --dev",
-    "serve": "deno run --allow-net --allow-read --allow-env --no-check main.tsx"
+    "generate": "deno run -A ./src/lib/generate_ico.ts"
   },
   "imports": {
     "hono-image": "jsr:@ptm/hono-image@^0.1.1",

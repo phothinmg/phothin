@@ -15,5 +15,8 @@ og:
   image:
 directories:
   posts: "posts"
+  pages: "pages"
   images: "img"
   style: "style"
+home:
+  logo: "logo.png"
