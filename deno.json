@@ -1,0 +1,13 @@
+{
+  "$schema": "./deno.schema.json",
+  "name": "@ptm/nyein-blog",
+  "version": "0.1.0",
+
+  "tasks": {
+    "start": "deno serve -A src/mod.ts"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "jsr:@hono/hono@^4.4.6/jsx"
+  }
+}
