@@ -1,0 +1,99 @@
+/* Inspired by  https://github.com/EthanDeL/Responsive-navbar */
+@layer components {
+  @scope (.navbar) {
+    :scope {
+      position: sticky;
+      width: 100%;
+      height: auto;
+      top: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+      background-color: var(--clr-bg-bright);
+    }
+    a:not(ul li a) {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: var(--clr-indigo);
+      text-decoration: none;
+      font-family: var(--font-pt);
+    }
+    div {
+      height: 100%;
+    }
+    div ul {
+      display: flex;
+      list-style: none;
+    }
+    div ul li {
+      padding: 0 15px;
+      font-weight: 600;
+    }
+    div ul li a {
+      color: var(--clr-text);
+      text-decoration: none;
+      font-family: var(--font-pt);
+    }
+    div ul li a:hover {
+      color: var(--clr-green);
+      cursor: pointer;
+    }
+    button {
+      position: absolute;
+      width: 27px;
+      height: 25px;
+      top: 1.7em;
+      right: 2em;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      border: none;
+      background-color: transparent;
+    }
+    button span {
+      width: 100%;
+      height: 4.5px;
+      border-radius: 15px;
+      background-color: var(--clr-text-bright);
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  @scope (.navbar) {
+    button {
+      display: flex;
+    }
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100dvh;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      justify-content: center;
+      align-content: center;
+      background-color: var(--clr-bg-bright);
+      opacity: 0.95;
+      backdrop-filter: blur(50px);
+    }
+    div.active {
+      display: flex;
+    }
+    div ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div ul li {
+      margin: 25px 0;
+      font-size: 1.2em;
+    }
+    a:not(ul li a) {
+      z-index: 2;
+    }
+  }
+}

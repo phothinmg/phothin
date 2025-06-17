@@ -1,0 +1,32 @@
+@layer utilities {
+  .mm {
+    font-family: var(--font-mm) !important;
+  }
+  .den-card {
+    border: var(--border);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 300px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .den-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .pt {
+    font-family: var(--font-pt) !important;
+  }
+  .jose {
+    font-family: var(--font-josefin) !important;
+  }
+  .title {
+    font-family: var(--font-josefin) !important;
+    color: var(--clr-green);
+  }
+}
