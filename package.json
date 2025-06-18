@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "codegen": "tsx shiki.mjs"
   },
   "dependencies": {
     "marked": "^15.0.12",
+    "marked-alert": "^2.1.2",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -18,6 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "shiki-codegen": "^3.6.0",
     "typescript": "^5"
   }
 }

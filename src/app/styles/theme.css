@@ -6,7 +6,8 @@
     --clr-text: #333;
     --clr-text-bright: #222;
     --clr-text-dim: #444;
-    --clr-border: #d1d1d1;
+    --clr-border: #c2c2c4;
+    --clr-code-block-lang: #67676c;
     /* Color Names */
     --clr-neutral: #fff;
     --clr-green: #18794e;
@@ -24,6 +25,8 @@
     --clr-text: #f7f7f7;
     --clr-text-bright: #fff;
     --clr-text-dim: #ddd;
+    --clr-border: #3c3f44;
+    --clr-code-block-lang: #98989f;
     /* Color Names */
     --clr-neutral: #000;
     --clr-green: #18794e;
@@ -43,10 +46,29 @@
     --shadow-md: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
     --shadow-xl: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
-    --shadow-xxl: 0 18px 56px rgba(0, 0, 0, 0.16),
-      0 4px 12px rgba(0, 0, 0, 0.16);
+    --shadow-xxl:
+      0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
   }
   :root {
     --border: 1px solid var(--clr-border);
+  }
+  /* Shiki Code Block */
+  .dark .shiki {
+    background-color: var(--shiki-dark-bg) !important;
+  }
+  .dark .shiki span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+  html[data-theme="dark"] .shiki {
+    background-color: var(--shiki-dark-bg) !important;
+  }
+  html[data-theme="dark"] .shiki span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
   }
 }
