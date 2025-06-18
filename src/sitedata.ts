@@ -1,4 +1,4 @@
 export default {
-  siteName: "Pho Thin",
-  description: "Personal Blog",
+  siteName: "Lwe8 Notes",
+  description: "Personal Notes",
 };

@@ -2,6 +2,11 @@ import type { Post } from "@/lib";
 import type { FC } from "react";
 import { notFound } from "next/navigation";
 import { formatDate } from "@/lib";
+import {
+  NoButton,
+  NextPostButton,
+  PrevPostButton,
+} from "@/components/icons/PaginateBtn";
 interface PostsProps {
   prev: Post["prev"];
   next: Post["next"];
@@ -22,15 +27,15 @@ const PostLayout: FC<PostsProps> = ({ prev, next, body, title, date }) => {
       </div>
       <div className="markdown" dangerouslySetInnerHTML={html} />
       <div className="pagination">
-        {prev.bool ? (
-          <a href={prev.slug}>Previous Post : {prev.title}</a>
-        ) : (
-          <p>{prev.title}</p>
-        )}
         {next.bool ? (
-          <a href={next.slug}>Next Post : {next.title}</a>
+          <NextPostButton title={next.title} href={next.slug} />
         ) : (
-          <p>{next.title}</p>
+          <NoButton text="Post" />
+        )}
+        {prev.bool ? (
+          <PrevPostButton title={prev.title} href={prev.slug} />
+        ) : (
+          <NoButton text="Post" />
         )}
       </div>
     </section>

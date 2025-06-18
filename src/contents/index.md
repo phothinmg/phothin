@@ -2,15 +2,4 @@
 title: Home
 ---
 
-# Pho Thin
-
-```ts
-const getLang = (str: string): BundledLanguage | "" => {
-  const cleanedStr: string = str.replace(/\s+/g, " ");
-  const firstWord: string = cleanedStr.split(" ")[0];
-  return Object.keys(bundledLanguages).includes(firstWord)
-    ? (firstWord as BundledLanguage)
-    : "";
-};
-```
-
+<img src="/images/lwe8.svg" alt="lwe8" width="75" height="27" />

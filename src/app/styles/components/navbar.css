@@ -9,19 +9,23 @@
       padding: 20px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+
       /* box-shadow: var(--shadow-md); */
       background-color: var(--clr-bg-bright);
       border: var(--border);
     }
     a:not(ul li a) {
-      font-size: 1.8em;
+      font-size: 1.5rem;
       font-weight: 600;
       color: var(--clr-indigo);
       text-decoration: none;
       font-family: var(--font-pt);
     }
+    a:not(ul li a):hover {
+      color: var(--clr-yellow);
+    }
     div {
+      margin-top: 20px;
       height: 100%;
     }
     div ul {
