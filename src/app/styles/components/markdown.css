@@ -3,12 +3,13 @@
     :scope {
       margin: auto;
       padding: 20px;
-      max-width: 70rem;
+      max-width: var(--main-width);
       line-height: 1.6;
       box-shadow: var(--shadow-sm);
       border-radius: 10px;
     }
-    h1 {
+    /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#specifying_a_uniform_font_size_for_h1*/
+    :where(h1) {
       font-size: 2.2rem;
       margin: 5px 0;
     }

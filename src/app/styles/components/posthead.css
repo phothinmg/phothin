@@ -1,0 +1,24 @@
+@layer components {
+  @scope (.posthead) {
+    :scope {
+      margin: 7px auto;
+      padding: 20px;
+      max-width: var(--main-width);
+      line-height: 1.6;
+      box-shadow: var(--shadow-sm);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    :where(h1) {
+      font-family: var(--font-pt);
+      color: var(--clr-text-dim);
+    }
+    :where(p) {
+      font-family: var(--font-pt);
+      color: var(--clr-text-dim);
+    }
+  }
+}

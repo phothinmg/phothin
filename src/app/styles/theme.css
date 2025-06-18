@@ -51,6 +51,7 @@
   }
   :root {
     --border: 1px solid var(--clr-border);
+    --main-width: 70rem;
   }
   /* Shiki Code Block */
   .dark .shiki {

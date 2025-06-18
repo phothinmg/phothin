@@ -12,10 +12,7 @@ const NavBar = React.memo(function NavBar() {
       <div className={activeClass}>
         <ul>
           <li>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link href={"/posts"}>Posts</Link>
+            <Link href={"/blog"}>Blog</Link>
           </li>
           <li>
             <Link href={"/projects"}>Projects</Link>
@@ -24,6 +21,7 @@ const NavBar = React.memo(function NavBar() {
       </div>
       <button
         type="button"
+        id="menu-btn"
         onClick={() =>
           activeClass === "noop"
             ? setActiveClass("active")

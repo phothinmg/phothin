@@ -1,32 +1,31 @@
-import type { Post } from "@/textile";
+import type { Post } from "@/lib/posts";
 import Link from "next/link";
 import React from "react";
 
 interface PostCardProps {
-  slug: Post["slug"];
-  title?: Post["parsedData"]["title"];
-  date?: Post["parsedData"]["date"];
-  description?: Post["parsedData"]["description"];
-  coverImg?: Post["parsedData"]["coverImg"];
+  slug: Post["fileData"]["slug"];
+  title?: Post["metaData"]["title"];
+  date?: Post["metaData"]["date"];
+  description?: Post["metaData"]["description"];
+  coverImg?: Post["metaData"]["coverImg"];
+  tags?: Post["metaData"]["tags"];
 }
 
-const BlogCard: React.FC<PostCardProps> = ({
+const BlogCard: React.FC<Partial<PostCardProps>> = ({
   slug,
   title,
   date,
-  description,
   coverImg,
 }) => {
   const _title = title ?? "";
   const _date = date ?? "";
-  const des = description ?? "";
   const img = coverImg ?? "";
   return (
     <div className="blog-card">
       <img src={img} alt={_title} />
       <div className="content">
         <h2>
-          <Link href={`/posts/${slug}`}>{_title}</Link>
+          <Link href={`/blog/${slug}`}>{_title}</Link>
         </h2>
         <p>{_date}</p>
       </div>
