@@ -1,7 +1,7 @@
 import { marked } from "marked";
-import shikimarked from "./hooks/shiki";
-import matter from "./matter";
-import responsiveTabelHook from "./hooks/table";
+import shikimarked from "./hooks/marked-extension/shiki";
+import matter from "./hooks/pre-process/matter";
+import responsiveTabelHook from "./hooks/post-process/table";
 
 export type MetaData = {
   title: string;

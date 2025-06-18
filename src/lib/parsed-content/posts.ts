@@ -1,6 +1,6 @@
 import path from "node:path";
 import { readContentFromFolder, type FileData } from "./nodejs";
-import markedParser, { type MetaData } from "./marked";
+import markedParser, { type MetaData } from "@/lib/marked";
 import { formatDate } from "./helpers";
 interface _Post {
   fileData: FileData;
@@ -21,15 +21,6 @@ export interface Post extends _Post {
 }
 export type Posts = Post[];
 
-export interface PaginatePost {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  coverImg: string;
-  tags: string[];
-}
-[];
 export type PaginatePosts = {
   slug: string;
   title: string;

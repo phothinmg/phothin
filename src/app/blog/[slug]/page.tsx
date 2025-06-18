@@ -5,7 +5,7 @@
  */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { posts } from "@/lib/posts";
+import { posts } from "@/lib";
 import PostLayout from "@/components/posts/PostLayout";
 
 export async function generateStaticParams() {

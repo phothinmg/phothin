@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import BlogCard from "@/components/posts/BlogCard";
 import PagePagination from "@/components/posts/PagePaginate";
-import type { PaginatePosts } from "@/lib/posts";
+import type { PaginatePosts } from "@/lib";
 
 export default function AllPosts() {
   const [pages, setPages] = useState<PaginatePosts | null>(null);

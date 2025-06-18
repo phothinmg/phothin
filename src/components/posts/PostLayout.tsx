@@ -1,7 +1,7 @@
-import type { Post } from "@/lib/posts";
+import type { Post } from "@/lib";
 import type { FC } from "react";
 import { notFound } from "next/navigation";
-import { formatDate } from "@/lib/helpers";
+import { formatDate } from "@/lib";
 interface PostsProps {
   prev: Post["prev"];
   next: Post["next"];

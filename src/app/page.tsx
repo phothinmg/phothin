@@ -1,4 +1,4 @@
-import homePage from "@/lib/homePage";
+import { homePage } from "@/lib";
 
 export default function Home() {
   const html = { __html: homePage.parsedHtml };
