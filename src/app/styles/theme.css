@@ -6,6 +6,7 @@
     --clr-text: #333;
     --clr-text-bright: #222;
     --clr-text-dim: #444;
+    --clr-title-text: #666;
     --clr-border: #c2c2c4;
     --clr-code-block-lang: #67676c;
     /* Color Names */
@@ -25,6 +26,7 @@
     --clr-text: #f7f7f7;
     --clr-text-bright: #fff;
     --clr-text-dim: #ddd;
+    --clr-title-text: #bbb;
     --clr-border: #3c3f44;
     --clr-code-block-lang: #98989f;
     /* Color Names */
@@ -51,6 +53,8 @@
   }
   :root {
     --border: 1px solid var(--clr-border);
+    --border-2: 2px solid var(--clr-border);
+    --border-3: 3px solid var(--clr-border);
     --main-width: 70rem;
   }
   /* Shiki Code Block */

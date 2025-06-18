@@ -10,8 +10,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: var(--shadow-md);
+      /* box-shadow: var(--shadow-md); */
       background-color: var(--clr-bg-bright);
+      border: var(--border);
     }
     a:not(ul li a) {
       font-size: 1.8em;
